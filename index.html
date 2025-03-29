@@ -3,142 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport Volleyball - Tudo sobre Vôlei</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('volley-court-bg.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-        }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .main-content {
-            display: flex;
-            flex: 1;
-            padding: 20px;
-        }
-        
-        .menu {
-            width: 200px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-        }
-        
-        .content {
-            flex: 1;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            margin-left: 20px;
-        }
-        
-        .footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            text-align: center;
-        }
-        
-        .media-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        
-        .media-item {
-            width: calc(33% - 10px);
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            border: 2px solid #fff;
-        }
-        
-        a {
-            color: #ff6600;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Vôlei Passion - Home</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="top-bar">
-            <div class="logo">SPORT VOLLEYBALL</div>
-            <div class="nav-links">
-                <a href="#">Início</a>
-                <a href="#">História</a>
-                <a href="#">Como Jogar</a>
-                <a href="#">Quadras</a>
-                <a href="#">Jogadores</a>
-                <a href="#">Contato</a>
-            </div>
-        </div>
-        
-        <div class="main-content">
-            <div class="menu">
-                <h3>Menu</h3>
-                <ul>
-                    <li><a href="#history">Origem do Vôlei</a></li>
-                    <li><a href="#how-to-play">Regras Básicas</a></li>
-                    <li><a href="#courts">Tipos de Quadras</a></li>
-                    <li><a href="#world">Vôlei pelo Mundo</a></li>
-                    <li><a href="#players">Melhores Jogadores</a></li>
-                    <li><a href="#media">Fotos e Vídeos</a></li>
-                </ul>
-            </div>
-            
-            <div class="content">
-                <section id="history">
-                    <h2>Como o Vôlei Surgiu</h2>
-                    <p>O voleibol foi criado em 1895 por William G. Morgan nos Estados Unidos. Originalmente chamado de "mintonette", o esporte foi desenvolvido como uma alternativa menos intensa ao basquete para membros mais velhos da YMCA.</p>
-                    <!-- Mais conteúdo aqui -->
-                </section>
-                
-                <section id="how-to-play">
-                    <h2>Como Jogar Vôlei</h2>
-                    <p>O vôlei é jogado por duas equipes de seis jogadores em uma quadra dividida por uma rede. O objetivo é fazer a bola tocar o chão no campo adversário. Cada equipe pode tocar a bola até três vezes antes de enviá-la para o outro lado.</p>
-                    <!-- Mais conteúdo aqui -->
-                </section>
-                
-                <section id="media">
-                    <h2>Fotos e Vídeos de Jogadas</h2>
-                    <div class="media-gallery">
-                        <div class="media-item" style="background-image: url('spike.jpg')"></div>
-                        <div class="media-item" style="background-image: url('block.jpg')"></div>
-                        <div class="media-item" style="background-image: url('serve.jpg')"></div>
-                        <!-- Mais itens de mídia -->
-                    </div>
-                </section>
-                
-                <!-- Outras seções -->
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>© 2023 Sport Volleyball - Todos os direitos reservados</p>
-        </div>
-    </div>
+    <header>
+        <h1>Vôlei Passion</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="gallery.html">Galeria</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/unsplash1.jpg" alt="Jogadores de vôlei em ação">
+            <h2>Bem-vindo ao Mundo do Vôlei</h2>
+            <p>Descubra tudo sobre esse esporte emocionante!</p>
+        </section>
+
+        <section class="highlights">
+            <article>
+                <h3>História do Vôlei</h3>
+                <p>Conheça as origens deste esporte fascinante...</p>
+                <a href="about.html">Saiba mais</a>
+            </article>
+            <article>
+                <h3>Melhores Jogadas</h3>
+                <p>Veja as jogadas mais incríveis da história...</p>
+                <a href="gallery.html">Ver galeria</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Vôlei Passion - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

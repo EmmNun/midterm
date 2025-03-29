@@ -1,59 +1,33 @@
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('theme-toggle');
-const toggleIcon = document.querySelector('.toggle-icon');
-const body = document.body;
+// Array de cores
+const colors = ["#fff9f7", "#fefff7", "#f7fff7"]; // grey, yellow, green
 
-// Check for saved theme preference or use preferred color scheme
-const savedTheme = localStorage.getItem('theme') || 
-                   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+// Capturar input do usuário
+const userName = prompt("Qual é o seu nome?");
+const colorChoice = prompt("Escolha uma cor de fundo: 0 para cinza, 1 para amarelo, 2 para verde");
 
-// Apply saved theme
-if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
-    toggleIcon.textContent = '☀️';
-}
+// Armazenar em objeto
+const userInfo = { 
+    name: userName, 
+    selectedColor: colors[colorChoice] 
+};
 
-// Toggle theme
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    toggleIcon.textContent = isDark ? '☀️' : '🌙';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
+// Verificação de array (requisito)
+console.log("A primeira cor no array é:", colors[0]); // deve mostrar o HEX cinza
 
-// Page Transition Loading Effect
-const pageTransition = document.querySelector('.page-transition');
-const navLinks = document.querySelectorAll('nav a');
-
-// Show loading when navigating between pages
-navLinks.forEach(link => {
-    if (link.href.includes('.html') && !link.classList.contains('active')) {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const destination = link.href;
-            const pageName = link.textContent.trim();
-            
-            // Update loading message
-            document.querySelector('.loading-message').textContent = `Loading ${pageName} page...`;
-            
-            // Show loading overlay
-            pageTransition.style.display = 'flex';
-            
-            // After a short delay, proceed to the page
-            setTimeout(() => {
-                window.location.href = destination;
-            }, 800);
-        });
+// Aplicar cor ao fundo
+if (userInfo.selectedColor) {
+    document.body.style.backgroundColor = userInfo.selectedColor;
+    
+    // Adicionar saudação personalizada
+    if (userInfo.name) {
+        const greeting = document.createElement('div');
+        greeting.textContent = `Olá, ${userInfo.name}! Bem-vindo ao Vôlei Passion.`;
+        greeting.style.padding = '10px';
+        greeting.style.backgroundColor = 'rgba(0,0,0,0.1)';
+        greeting.style.margin = '10px 0';
+        greeting.style.borderRadius = '4px';
+        document.querySelector('main').prepend(greeting);
     }
-});
-
-// Hide loading when page is fully loaded
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        pageTransition.style.opacity = '0';
-        setTimeout(() => {
-            pageTransition.style.display = 'none';
-            pageTransition.style.opacity = '1';
-        }, 300);
-    }, 500);
-});
+} else {
+    console.log("Cor inválida selecionada");
+}
