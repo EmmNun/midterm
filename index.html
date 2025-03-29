@@ -4,39 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vôlei Passion - Home</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Vôlei Passion</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="gallery.html">Galeria</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
+    <header class="top-bar">
+        <div class="logo">VOLEI PASSION</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="history.html">História</a>
+            <a href="how-to-play.html">Como Jogar</a>
+            <a href="contact.html">Contato</a>
         </nav>
     </header>
 
-    <main>
+    <main class="main-content">
         <section class="hero">
-            <img src="images/unsplash1.jpg" alt="Jogadores de vôlei em ação">
-            <h2>Bem-vindo ao Mundo do Vôlei</h2>
-            <p>Descubra tudo sobre esse esporte emocionante!</p>
+            <h1>02 a 06 de Abril em Saquarema/RJ</h1>
+            <p>Acompanhe os jogos ao vivo no Canal Vôlei Brasil</p>
+            <button class="cta-button">Saiba mais</button>
         </section>
 
-        <section class="highlights">
-            <article>
-                <h3>História do Vôlei</h3>
-                <p>Conheça as origens deste esporte fascinante...</p>
-                <a href="about.html">Saiba mais</a>
-            </article>
-            <article>
-                <h3>Melhores Jogadas</h3>
-                <p>Veja as jogadas mais incríveis da história...</p>
-                <a href="gallery.html">Ver galeria</a>
-            </article>
+        <section class="schedule">
+            <h2>Próximos Jogos</h2>
+            <div class="games-container">
+                <div class="game-card">
+                    <h3>Jogo 134 - QUARTAS DE FINAL</h3>
+                    <p>ADENA UNIBRI</p>
+                    <p>sábado - 29/03 - 17:00</p>
+                    <p>sportv2</p>
+                </div>
+                <div class="game-card">
+                    <h3>Jogo 135 - QUARTAS DE FINAL</h3>
+                    <p>GINÁSIO DE ESPORTES CHICO NETO</p>
+                    <p>sábado - 29/03 - 20:00</p>
+                    <p>sportv2</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="media-highlights">
+            <h2>Melhores Momentos</h2>
+            <div class="media-grid">
+                <div class="media-item"><img src="images/techniques.jpg" alt="Jogada de vôlei"></div>
+                <div class="media-item"><img src="images/players.jpg" alt="Jogadores celebrando"></div>
+            </div>
         </section>
     </main>
 
@@ -44,6 +55,6 @@
         <p>&copy; 2023 Vôlei Passion - Todos os direitos reservados</p>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
