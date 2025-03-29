@@ -1,60 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vôlei Passion - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Learn about volleyball history, rules, and top players">
+    <title>Volleyball World - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="top-bar">
-        <div class="logo">VOLEI PASSION</div>
-        <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="history.html">História</a>
-            <a href="how-to-play.html">Como Jogar</a>
-            <a href="contact.html">Contato</a>
+    <header>
+        <div class="logo-container">
+            <img src="https://source.unsplash.com/random/300x200/?volleyball-logo" alt="Volleyball Logo">
+            <h1>Volleyball World</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="players.html">Players</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main-content">
-        <section class="hero">
-            <h1>02 a 06 de Abril em Saquarema/RJ</h1>
-            <p>Acompanhe os jogos ao vivo no Canal Vôlei Brasil</p>
-            <button class="cta-button">Saiba mais</button>
-        </section>
-
-        <section class="schedule">
-            <h2>Próximos Jogos</h2>
-            <div class="games-container">
-                <div class="game-card">
-                    <h3>Jogo 134 - QUARTAS DE FINAL</h3>
-                    <p>ADENA UNIBRI</p>
-                    <p>sábado - 29/03 - 17:00</p>
-                    <p>sportv2</p>
-                </div>
-                <div class="game-card">
-                    <h3>Jogo 135 - QUARTAS DE FINAL</h3>
-                    <p>GINÁSIO DE ESPORTES CHICO NETO</p>
-                    <p>sábado - 29/03 - 20:00</p>
-                    <p>sportv2</p>
-                </div>
+    <main class="container">
+        <aside class="sidebar">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#indoor">Indoor Volleyball</a></li>
+                <li><a href="#beach">Beach Volleyball</a></li>
+                <li><a href="#tournaments">Major Tournaments</a></li>
+                <li><a href="#federation">Volleyball Federation</a></li>
+            </ul>
+            <div class="sidebar-feature">
+                <h3>Upcoming Events</h3>
+                <p>Circuito Brasileiro de Vôlei de Praia</p>
+                <p>02 a 06 de Abril em Saquarema/RJ</p>
+                <a href="#" class="btn">Saiba mais →</a>
             </div>
-        </section>
+        </aside>
 
-        <section class="media-highlights">
-            <h2>Melhores Momentos</h2>
-            <div class="media-grid">
-                <div class="media-item"><img src="images/techniques.jpg" alt="Jogada de vôlei"></div>
-                <div class="media-item"><img src="images/players.jpg" alt="Jogadores celebrando"></div>
-            </div>
+        <section class="content">
+            <article class="hero">
+                <img src="https://source.unsplash.com/random/800x400/?volleyball-match" alt="Volleyball Match">
+                <div class="hero-text">
+                    <h2>Welcome to the World of Volleyball</h2>
+                    <p>Discover the exciting sport that combines athleticism, strategy, and teamwork.</p>
+                </div>
+            </article>
+            
+            <article id="indoor">
+                <h2>Indoor Volleyball</h2>
+                <p>Indoor volleyball is played on a court with six players on each side. It's an Olympic sport known for its fast-paced action and spectacular plays.</p>
+                <img src="https://source.unsplash.com/random/600x300/?indoor-volleyball" alt="Indoor Volleyball">
+            </article>
+            
+            <article id="beach">
+                <h2>Beach Volleyball</h2>
+                <p>Beach volleyball is typically played with two players per team on a sand court. It became an Olympic sport in 1996 and has grown in popularity worldwide.</p>
+                <img src="https://source.unsplash.com/random/600x300/?beach-volleyball" alt="Beach Volleyball">
+            </article>
+            
+            <article id="tournaments">
+                <h2>Major Tournaments</h2>
+                <p>From the FIVB World Championships to the Olympic Games, volleyball features some of the most exciting international competitions in sports.</p>
+                <img src="https://source.unsplash.com/random/600x300/?volleyball-tournament" alt="Volleyball Tournament">
+            </article>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Vôlei Passion - Todos os direitos reservados</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Volleyball World</h3>
+                <p>Your ultimate resource for volleyball information, history, rules, and players.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="players.html">Players</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Volleyball World. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
