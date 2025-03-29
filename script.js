@@ -1,38 +1,59 @@
-// Background color options
-const colors = ["#f1faee", "#a8dadc", "#e63946"]; // light, teal, red
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('theme-toggle');
+const toggleIcon = document.querySelector('.toggle-icon');
+const body = document.body;
 
-// Prompt for user input
-const userName = prompt("What is your name?");
-const colorChoice = prompt("Pick a background color: 0 for light, 1 for teal, 2 for red");
+// Check for saved theme preference or use preferred color scheme
+const savedTheme = localStorage.getItem('theme') || 
+                   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-// Store input in an object
-const userInfo = {
-    name: userName,
-    selectedColor: colors[colorChoice]
-};
-
-// Array check
-console.log("The first color in the array is:", colors[0]);
-
-// Apply color to background
-document.body.style.backgroundColor = userInfo.selectedColor;
-
-// Welcome message
-if (userName) {
-    const welcomeMessage = document.createElement('div');
-    welcomeMessage.style.position = 'fixed';
-    welcomeMessage.style.bottom = '20px';
-    welcomeMessage.style.right = '20px';
-    welcomeMessage.style.backgroundColor = 'rgba(0,0,0,0.7)';
-    welcomeMessage.style.color = 'white';
-    welcomeMessage.style.padding = '10px 20px';
-    welcomeMessage.style.borderRadius = '5px';
-    welcomeMessage.style.zIndex = '1000';
-    welcomeMessage.textContent = `Welcome, ${userName}! Enjoy volleyball!`;
-    document.body.appendChild(welcomeMessage);
-    
-    // Remove message after 5 seconds
-    setTimeout(() => {
-        welcomeMessage.style.display = 'none';
-    }, 5000);
+// Apply saved theme
+if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    toggleIcon.textContent = '☀️';
 }
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggleIcon.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// Page Transition Loading Effect
+const pageTransition = document.querySelector('.page-transition');
+const navLinks = document.querySelectorAll('nav a');
+
+// Show loading when navigating between pages
+navLinks.forEach(link => {
+    if (link.href.includes('.html') && !link.classList.contains('active')) {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const destination = link.href;
+            const pageName = link.textContent.trim();
+            
+            // Update loading message
+            document.querySelector('.loading-message').textContent = `Loading ${pageName} page...`;
+            
+            // Show loading overlay
+            pageTransition.style.display = 'flex';
+            
+            // After a short delay, proceed to the page
+            setTimeout(() => {
+                window.location.href = destination;
+            }, 800);
+        });
+    }
+});
+
+// Hide loading when page is fully loaded
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        pageTransition.style.opacity = '0';
+        setTimeout(() => {
+            pageTransition.style.display = 'none';
+            pageTransition.style.opacity = '1';
+        }, 300);
+    }, 500);
+});

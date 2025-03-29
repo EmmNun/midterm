@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volleyball World - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Volleyball World</h1>
+<header>
+    <h1>Volleyball World</h1>
+    <div class="header-controls">
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
@@ -18,93 +9,16 @@
                 <li><a href="leagues.html">Leagues & Players</a></li>
             </ul>
         </nav>
-    </header>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon">🌙</span>
+        </button>
+    </div>
+</header>
 
-    <main>
-        <section class="hero">
-            <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Volleyball action shot">
-            <div class="hero-text">
-                <h2>Welcome to Volleyball World</h2>
-                <p>Discover everything about this exciting sport!</p>
-            </div>
-        </section>
-
-        <section class="quick-links">
-            <article>
-                <h3>How to Play</h3>
-                <img src="https://images.unsplash.com/photo-1592656094267-764a7f8e7c29?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Volleyball basics">
-                <p>Learn the basic rules and techniques of volleyball.</p>
-                <a href="#how-to-play" class="btn">Learn More</a>
-            </article>
-
-            <article>
-                <h3>Fun Facts</h3>
-                <img src="https://images.unsplash.com/photo-1544463775-64e724a8d683?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Volleyball fun facts">
-                <p>Discover interesting trivia about volleyball.</p>
-                <a href="#fun-facts" class="btn">Discover</a>
-            </article>
-
-            <article>
-                <h3>Equipment</h3>
-                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Volleyball equipment">
-                <p>What you need to start playing volleyball.</p>
-                <a href="#equipment" class="btn">See Gear</a>
-            </article>
-        </section>
-
-        <section id="how-to-play" class="content-section">
-            <h2>How to Play Volleyball</h2>
-            <div class="two-column">
-                <div>
-                    <h3>Basic Rules</h3>
-                    <ul>
-                        <li>Teams of 6 players</li>
-                        <li>3 hits maximum per side</li>
-                        <li>Player cannot hit the ball twice in succession</li>
-                        <li>Ball must be returned over the net in 3 hits or less</li>
-                        <li>Games are played to 25 points (must win by 2)</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Key Skills</h3>
-                    <ul>
-                        <li>Serving (underhand or overhand)</li>
-                        <li>Passing (forearm underhand pass)</li>
-                        <li>Setting (overhead pass)</li>
-                        <li>Attack options (hitting/spiking)</li>
-                        <li>Blocking (from the front row)</li>
-                        <li>Defensive skills (rolling, sliding)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="fun-facts" class="content-section">
-            <h2>Volleyball Fun Facts</h2>
-            <div class="facts-grid">
-                <div class="fact-card">
-                    <h3>Origin</h3>
-                    <p>Volleyball was invented in 1895 by William G. Morgan in Massachusetts, USA.</p>
-                </div>
-                <div class="fact-card">
-                    <h3>Olympic Sport</h3>
-                    <p>Volleyball became an Olympic sport in 1964 at the Tokyo Games.</p>
-                </div>
-                <div class="fact-card">
-                    <h3>Speed</h3>
-                    <p>A professional volleyball serve can reach speeds of up to 130 km/h (80 mph).</p>
-                </div>
-                <div class="fact-card">
-                    <h3>Beach Volleyball</h3>
-                    <p>Beach volleyball became an Olympic sport in 1996 at the Atlanta Games.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Volleyball World. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a
+<!-- Add loading overlay at the bottom of body -->
+<div class="page-transition">
+    <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <p class="loading-message">Loading content...</p>
+    </div>
+</div>
